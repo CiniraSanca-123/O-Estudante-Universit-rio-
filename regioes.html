@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Estudante Universitário - Regiões</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🏛️ O Estudante Universitário</h1>
+        <p class="subtitulo">Conhece as regiões que terás de enfrentar</p>
+    </header>
+
+    <nav class="menu-navegacao">
+       <a href="bem-vindo.html">🏠 Início</a>
+       <a href="index_inicial.html">📖 Home</a>
+       <a href="regioes.html" class="ativo">🗺️ Regiões</a>
+       <a href="personagens.html">👤 Personagens</a>
+    </nav>
+
+    <main class="conteudo-pagina">
+        <section class="secao-historia">
+            <h2>🗺️ As Regiões</h2>
+
+            <div class="slideshow">
+                <div class="slide ativo">
+                    <img src="image/portal_de_entrada.jpeg" alt="Portal de Entrada" />
+                    <p class="slide-titulo">🚪 Região 1 — O Portal de Entrada</p>
+                </div>
+                <div class="slide">
+                    <img src="image/os_corredores-do_saber.jpeg" alt="Corredores do Saber" />
+                    <p class="slide-titulo">📚 Região 2 — Os Corredores do Saber</p>
+                </div>
+                <div class="slide">
+                    <img src="image/o_submundo.jpeg" alt="O submundo" />
+                    <p class="slide-titulo">📖 Região 3 — O Submundo</p>
+                </div>
+                <div class="slide">
+                    <img src="image/A_AV-2.jpeg" alt="A AV-2" />
+                    <p class="slide-titulo">⚠️ Região 4 — A AV-2</p>
+                </div>
+            </div>
+
+            <div class="slide-controles">
+                <button class="btn-slide" onclick="mudarSlide(-1)">◀ Anterior</button>
+                <span class="slide-contador" id="contador">1 / 4</span>
+                <button class="btn-slide" onclick="mudarSlide(1)">Próximo ▶</button>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>🎓 Projeto Universitário - 2026 | O Estudante Universitário</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

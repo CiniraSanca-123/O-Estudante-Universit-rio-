@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>O Estudante Universitário - História</title>
     <link rel="stylesheet" href="style.css">
-    
+
 </head>
 <body>
 
@@ -28,9 +28,8 @@
 
           <div class="historia-layout">
                 <div class="historia-imagem">
-                    <img src="image/biblioteca.jpeg" alt="Personagem dentro da biblioteca">
+                   <img id="imagem-historia" src="image/biblioteca.jpeg" alt="História" />
                 </div>
-
                 <div class="historia-texto">
                     <p id="p1"></p>
                     <p id="p2"></p>
@@ -41,18 +40,30 @@
                    <p class="frase-final" id="pfinal"></p>
                </div>
             </div>
-            <div class="fase2" id="fase2">
-              <a href="jogar.html" class="botao-jogar">🎮 Jogar</a>
-            </div>
+           <button id="botaoJogar" class="botao-jogar">🎮 Jogar</button>
+            <script>
+               document.getElementById('botaoJogar').addEventListener('click', () => {
+               window.open('https://estudanteuniversitario.itch.io/uma-jornada-universitria', '_blank');
+              });
+            </script>
       </section> 
     </main>
+      <button onclick="sair()" class="botao-sair">Sair</button>
     <footer>
         <p>🎓 Projeto Universitário - 2026 | O Estudante Universitário</p>
    </footer>
+   <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="auth-guard.js"></script>
 
-     
+     script src="personagens.js"></script>
     <script src="script.js"></script>
     <script src="personagens.js"></script>
+
+     <script>
+       protegerPagina();
+    </script>
     
 </body>
 </html>

@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: url('image/fundo_2.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 5%;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 20px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.container > p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.botoes {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.botoes button {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #667eea;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s;
+    color: #667eea;
+}
+
+.botoes button.ativo {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    box-shadow: 0 0 10px rgba(102, 126, 234, 0.5);
+}
+
+.botoes button:hover {
+    background: rgba(102, 126, 234, 0.2);
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    font-size: 16px;
+    background: white;
+}
+
+input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s;
+}
+
+button:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 15px rgba(102, 126, 234, 0.5);
+}
+
+#mensagem {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #333;
+}

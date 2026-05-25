@@ -33,12 +33,29 @@ function digitarTexto(elementoId, texto, callback) {
     }, 28);
 }
 
+const imagens = [
+    'image/biblioteca.jpeg',
+    'image/biblioteca_2.jpeg',
+    'image/biblioteca_3.jpeg',
+];
+
+function trocarImagem(indice) {
+    const img = document.getElementById('imagem-historia');
+    if (!img) return;
+    img.style.opacity = '0';
+    setTimeout(() => {
+        img.src = imagens[indice] || imagens[imagens.length - 1];
+        img.style.opacity = '1';
+    }, 400);
+}
+
 function mostrarProximo() {
     if (indiceAtual >= textos.length) {
         mostrarFase2();
         return;
     }
     const atual = textos[indiceAtual];
+    trocarImagem(indiceAtual);
     indiceAtual++;
     digitarTexto(atual.id, atual.texto, mostrarProximo);
 }
@@ -65,15 +82,6 @@ function mudarSlide(direcao) {
     mostrarSlide(slideAtual + direcao);
 }
 
-function entrar() {
-    const usuario = document.getElementById('usuario').value;
-    const senha = document.getElementById('senha').value;
-    if (usuario === 'estudante' && senha === '1234') {
-        window.location.href = 'index_inicial.html';
-    } else {
-        alert('Usuário ou senha incorretos!');
-    }
-}
 
 if (document.querySelectorAll('.slide').length > 0) {
     temporizador = setInterval(() => mostrarSlide(slideAtual + 1), 5000);
@@ -92,19 +100,4 @@ function mudarSlide(direcao) {
     slideAtual = (direcao + slides.length) % slides.length;
     slides[slideAtual].classList.add('ativo');
     if (contador) contador.textContent = (slideAtual + 1) + ' / ' + slides.length;
-}
-
-function entrar() {
-    window.location.href = 'index_inicial.html';
-}
-
-function entrar() {
-    const usuario = document.getElementById('usuario').value;
-    const senha = document.getElementById('senha').value;
-
-    if (usuario === 'estudante' && senha === '1234') {
-        window.location.href = 'index_inicial.html';
-    } else {
-        alert('Usuário ou senha incorretos!');
-    }
 }
